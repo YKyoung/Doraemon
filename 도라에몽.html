@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>档扼俊根 传舅 奔府扁</title>
+<title>Doraemon</title>
 <meta charset="UTF-8">
 <style>
 body {
@@ -14,7 +14,7 @@ body {
     left: 50%;
     width: 600px;
     height: 800px;
-    background: url('doraemon.gif') no-repeat 50% 50%;
+    background: url('doraemon.gif') no-repeat 50% 50%; 
     background-size: contain;
     transform: translate(-50%,-50%);
 }
@@ -92,27 +92,30 @@ body {
 </div>
 
 <script>
-var 传舅 = function (selector) {
-    var 传 = document.querySelector(selector),
-        传悼磊 = 传.querySelector('.传悼磊'),
-        传康开 = 传.getBoundingClientRect();
 
-    var 传舅奔府扁 = function (mouseX, mouseY) {
-        var 扼叼救 = Math.atan2( mouseY - (传康开.y + 传康开.height * 0.5), mouseX - (传康开.x + 传康开.width * 0.5) );
-        传悼磊.style.transform = 'rotate(' + (180 * 扼叼救 / Math.PI - 90) + 'deg)';
+// 茄臂 函荐啊 救凳    
+var nunal = function (selector) {
+    var nun = document.querySelector(selector),
+        nundongja = nun.querySelector('.传悼磊'),
+        nunpart = nun.getBoundingClientRect();
+
+    var nunalturn = function (mouseX, mouseY) {
+        var radian = Math.atan2( mouseY - (nunpart.y + nunpart.height * 0.5), mouseX - (nunpart.x + nunpart.width * 0.5) );
+        nundongja.style.transform = 'rotate(' + (180 * radian / Math.PI - 90) + 'deg)';
     };
 
     return {
-        传舅奔府扁: 传舅奔府扁
+        nunalturn: nunalturn
     };
 };
 
-var 哭传 = 传舅('.传-1');
-var 坷弗传 = 传舅('.传-2');
+var leftnun = nunal('.传-1');
+var rightnun = nunal('.传-2');
 
 window.addEventListener('mousemove', function (e) {
-    哭传.传舅奔府扁(e.pageX, e.pageY);
-    坷弗传.传舅奔府扁(e.pageX, e.pageY);
+    leftnun.nunalturn(e.pageX, e.pageY);
+    rightnun.nunalturn(e.pageX, e.pageY);
+    console.log(e.pageX, e.pageY);
 });
 </script>
 </body>
